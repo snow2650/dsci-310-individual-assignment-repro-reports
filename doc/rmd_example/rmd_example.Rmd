@@ -37,8 +37,7 @@ Suppose we were interested in looking in more closely at the province with the h
 ```{r sd-table}
 horses_sd_table <- read_csv("../../results/horses_sd.csv")
 largest_sd <- horses_sd_table$Province[1]
-knitr::kable(horses_sd_table,
-  caption = "Maximum, minimum, and standard deviation of number of horses for each province between 1940 - 1972")
+knitr::kable(horses_sd_table)
 ```
 
 Note that we define standard deviation (of a sample) as
