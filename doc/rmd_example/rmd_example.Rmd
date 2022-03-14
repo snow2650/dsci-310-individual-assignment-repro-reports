@@ -16,7 +16,7 @@ This project explores the historical population of horses in Canada between 1906
 
 Data
 
-Horse population data were sourced from the [Government of Canada's Open Data website](http://open.canada.ca/en/open-data). Specifically, (Government of Canada, 2017)1 and (Government of Canada, 2017)2.
+Horse population data were sourced from the [Government of Canada's Open Data website](http://open.canada.ca/en/open-data) (Government of Canada, 2017a and Government of Canada, 2017b).
 
 Methods
 
