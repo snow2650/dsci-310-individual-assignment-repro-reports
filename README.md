@@ -12,9 +12,9 @@ To complete this assignment you will need to install:
 - GNU Make
 - R programming language
 - R packages:
+  - `bookdown`
   - `knitr`
   - `rmarkdown`
-  - `bookdown`
   - `tidyverse`
   - `tinytex`
 
