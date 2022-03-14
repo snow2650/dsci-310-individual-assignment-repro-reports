@@ -10,7 +10,7 @@ results/horse_pop_plot_largest_sd.png results/horse_pops_plot.png results/horses
 	Rscript source/generate_figures.R --input_dir="data/00030067-eng.csv" --out_dir="results"
 
 # render R Markdown report in HTML and PDF
-doc/rmd_example/rmd_example.html doc/rmd_example/rmd_example.pdf: doc/rmd_example/rmd_example.Rmd doc/rmd_example/refs.bib
+doc/rmd_example/rmd_example.html doc/rmd_example/rmd_example.pdf: doc/rmd_example/rmd_example.Rmd doc/rmd_example/references.bib
 	Rscript -e "rmarkdown::render('doc/rmd_example/rmd_example.Rmd', c('bookdown::html_document2', 'bookdown::pdf_document2'))"
 
 # render Jupyter Book report in HTML and PDF
