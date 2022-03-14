@@ -16,6 +16,7 @@ To complete this assignment you will need to install:
   - `rmarkdown`
   - `bookdown`
   - `tidyverse`
+  - `tinytex`
 
 ### License:
 The non-software content of this template repository is licensed under the 
