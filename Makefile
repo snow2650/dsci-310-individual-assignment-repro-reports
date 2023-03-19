@@ -1,6 +1,19 @@
 # author: Jordan Bourak
 # date: 2021-11-22
 
+
+.PHONY: report
+report:
+	make clean
+	
+	Rscript source/generate_figures.R --input_dir="data/00030067-eng.csv" --out_dir="results"
+	Rscript -e "rmarkdown::render('doc/rmd_example/rmd_example.Rmd', c('bookdown::html_document2', 'bookdown::pdf_document2'))"
+	#Rscript -e "rmarkdown::render('doc/rmd_example/rmd_example.Rmd', output_dir=here::here('results'))"
+
+
+.PHONY: clean
+
+
 rmd: results/horse_pop_plot_largest_sd.png results/horse_pops_plot.png results/horses_spread.csv doc/rmd_example/rmd_example.html doc/rmd_example/rmd_example.pdf
 
 jbook: results/horse_pop_plot_largest_sd.png results/horse_pops_plot.png results/horses_spread.csv doc/jbook_example/_build/html/index.html doc/jbook_example/_build/latex/python.pdf

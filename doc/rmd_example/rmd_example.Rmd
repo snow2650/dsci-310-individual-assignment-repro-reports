@@ -2,30 +2,60 @@
 title: 'DSCI 310: Historical Horse Population in Canada'
 author: "Tiffany Timbers & Jordan Bourak"
 output:
-  bookdown::html_document2
-  bookdown::pdf_document2
+  bookdown::html_document2:
+      toc: true
+      toc_depth: 2
+  
+  bookdown::pdf_document2:
+      toc: true
+      toc_depth: 2
+  
+  bibliography: references.bib
+  
 ---
 
-```{r}
+```{r setup, include=FALSE, echo=FALSE}
+
 library(tidyverse)
+library(knitr)
+library(bookdown)
+library(rmarkdown)
+library(tinytex)
+library(here)
+
+library(docopt)
+library(gridExtra)
+
+knitr::opts_chunk$set(echo = TRUE)
+print(getwd())
+source(here("source/generate_figures.R"))
+#kable(head(Horse))
+
 ```
 
-Aim
+#Aim
 
 This project explores the historical population of horses in Canada between 1906 and 1972 for each province.
 
-Data
+#Data
 
 Horse population data were sourced from the [Government of Canada's Open Data website](http://open.canada.ca/en/open-data) (Government of Canada, 2017a and Government of Canada, 2017b).
 
-Methods
+#Methods
 
 The R programming language (R Core Team, 2019) and the following R packages were used to perform the analysis: knitr (Xie 2014), tidyverse (Wickham 2017), and bookdown (Xie 2016). *Note: this report is adapted from (Timbers 2020).*
 
-Results
+#Results
 
 ```{r}
-knitr::include_graphics("../../results/horse_pops_plot.png")
+knitr::include_graphics("..//..//results/horse_pops_plot.png")
+
+
+horse_pops_plot_path <- here("results", "horse_pops_plot.png")
+
+knitr::include_graphics(horse_pops_plot_path)
+
+
 ```
 
 Figure 1: Horse populations for all provinces in Canada from 1906 - 1972
@@ -54,4 +84,4 @@ Figure 2: Horse populations for the province with the largest standard deviation
 
 In Figure 2 we zoom in and look at the province of ?, which had the largest spread of values in terms of standard deviation.
 
-References
+#References
