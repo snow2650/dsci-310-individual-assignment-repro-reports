@@ -10,12 +10,19 @@ output:
       toc: true
       toc_depth: 2
   
-  bibliography: references.bib
-  csl: biomed-central.csl
+bibliography: references.bib
+  #csl: biomed-central.csl
+  
+
   
 ---
+```{r setup, include= FALSE}
+knitr::opts_chunk$set(echo = TRUE)
 
-```{r setup, include=FALSE, echo=FALSE, fig.cap=8}
+```
+
+
+```{r,fig.cap=8}
 
 library(tidyverse)
 library(knitr)
@@ -27,16 +34,16 @@ library(here)
 library(docopt)
 library(gridExtra)
 
-knitr::opts_chunk$set(echo = TRUE)
+
 print(getwd())
-#source(here("source/generate_figures.R"))
-#kable(head(Horse))
+#source(here("source","generate_figures.R"))
+#kable(head(rmd_example))
 
 ```
 
 # Aim
 
-This project explores the historical population of horses in Canada between 1906 and 1972 for each province.
+This project explores the historical population of horses in Canada between 1906 and 1972 for each province.[@knitr]
 
 # Data
 
@@ -80,4 +87,5 @@ Figure 2: Horse populations for the province with the largest standard deviation
 In Figure 2 we zoom in and look at the province of ?, which had the largest spread of values in terms of standard deviation.
 
 # References
-<div id="refs"></div>
+
+

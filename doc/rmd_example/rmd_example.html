@@ -369,13 +369,42 @@ display: none;
 <li><a href="#data" id="toc-data"><span class="toc-section-number">2</span> Data</a></li>
 <li><a href="#methods" id="toc-methods"><span class="toc-section-number">3</span> Methods</a></li>
 <li><a href="#results" id="toc-results"><span class="toc-section-number">4</span> Results</a></li>
-<li><a href="#references" id="toc-references"><span class="toc-section-number">5</span> References</a></li>
+<li><a href="#references" id="toc-references">References</a></li>
 </ul>
 </div>
 
+<pre class="r"><code>library(tidyverse)</code></pre>
+<pre><code>## ── Attaching core tidyverse packages ─────────────────────────────────────────────────────── tidyverse 2.0.0 ──
+## ✔ dplyr     1.1.0     ✔ readr     2.1.4
+## ✔ forcats   1.0.0     ✔ stringr   1.5.0
+## ✔ ggplot2   3.4.1     ✔ tibble    3.1.8
+## ✔ lubridate 1.9.2     ✔ tidyr     1.3.0
+## ✔ purrr     1.0.1     
+## ── Conflicts ───────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()
+## ℹ Use the ]8;;http://conflicted.r-lib.org/conflicted package]8;; to force all conflicts to become errors</code></pre>
+<pre class="r"><code>library(knitr)
+library(bookdown)
+library(rmarkdown)
+library(tinytex)
+library(here)</code></pre>
+<pre><code>## here() starts at C:/Users/twent/Documents/UBC/DSCI 310/dsci-310-individual-assignment-repro-reports</code></pre>
+<pre class="r"><code>library(docopt)
+library(gridExtra)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;gridExtra&#39;
+## 
+## The following object is masked from &#39;package:dplyr&#39;:
+## 
+##     combine</code></pre>
+<pre class="r"><code>print(getwd())</code></pre>
+<pre><code>## [1] &quot;C:/Users/twent/Documents/UBC/DSCI 310/dsci-310-individual-assignment-repro-reports/doc/rmd_example&quot;</code></pre>
+<pre class="r"><code>#source(here(&quot;source&quot;,&quot;generate_figures.R&quot;))
+#kable(head(rmd_example))</code></pre>
 <div id="aim" class="section level1" number="1">
 <h1><span class="header-section-number">1</span> Aim</h1>
-<p>This project explores the historical population of horses in Canada between 1906 and 1972 for each province.</p>
+<p>This project explores the historical population of horses in Canada between 1906 and 1972 for each province.<span class="citation">(Xie 2014)</span></p>
 </div>
 <div id="data" class="section level1" number="2">
 <h1><span class="header-section-number">2</span> Data</h1>
@@ -394,7 +423,7 @@ display: none;
 <p>Suppose we were interested in looking in more closely at the province with the highest spread (in terms of standard deviation) of horse populations. We present the standard deviations here:</p>
 <pre class="r"><code>horses_sd_table &lt;- read_csv(&quot;../../results/horses_sd.csv&quot;)</code></pre>
 <pre><code>## Rows: 9 Columns: 2
-## ── Column specification ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+## ── Column specification ───────────────────────────────────────────────────────────────────────────────────────
 ## Delimiter: &quot;,&quot;
 ## chr (1): Province
 ## dbl (1): Std
@@ -457,10 +486,12 @@ knitr::kable(horses_sd_table)</code></pre>
 <p>Figure 2: Horse populations for the province with the largest standard deviation</p>
 <p>In Figure 2 we zoom in and look at the province of ?, which had the largest spread of values in terms of standard deviation.</p>
 </div>
-<div id="references" class="section level1" number="5">
-<h1><span class="header-section-number">5</span> References</h1>
-<div id="refs">
-
+<div id="references" class="section level1 unnumbered">
+<h1>References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-knitr" class="csl-entry">
+Xie, Yihui. 2014. <span>“Knitr: A Comprehensive Tool for Reproducible Research in <span>R</span>.”</span> In <em>Implementing Reproducible Computational Research</em>, edited by Victoria Stodden, Friedrich Leisch, and Roger D. Peng. Chapman; Hall/CRC. <a href="http://www.crcpress.com/product/isbn/9781466561595">http://www.crcpress.com/product/isbn/9781466561595</a>.
+</div>
 </div>
 </div>
 
