@@ -6,14 +6,14 @@ output:
       toc: true
       toc_depth: 2
       #base_format: rticles::jss_article
-  
+      
   bookdown::pdf_document2:
       toc: true
       toc_depth: 2
       #base_format: rticles::jss_article
   
 bibliography: references.bib
-  #csl: biomed-central.csl
+
   
 
   
@@ -57,7 +57,7 @@ The R programming language (R Core Team, 2019) and the following R packages were
 
 # Results
 
-```{r,out.width="80%",fig.cap= "Horse populations for all provinces in Canada from 1906 - 1972",fig.align = 'center'}
+```{r h1,out.width="90%",fig.cap= "Horse populations for all provinces in Canada from 1906 - 1972",fig.align = 'center'}
 knitr::include_graphics("../../results/horse_pops_plot.png")
 #Figure 1: Horse populations for all provinces in Canada from 1906 - 1972
 
@@ -65,11 +65,11 @@ knitr::include_graphics("../../results/horse_pops_plot.png")
 
 
 
-We can see from Figure 1 that Ontario, Saskatchewan and Alberta have had the highest horse populations in Canada. All provinces have had a decline in horse populations since 1940. This is likely due to the rebound of the Canadian automotive industry after the Great Depression and the Second World War. An interesting follow-up visualisation would be car sales per year for each Province over the time period visualised above to further support this hypothesis.
+We can see from Figure \@ref(fig:h1) that Ontario, Saskatchewan and Alberta have had the highest horse populations in Canada. All provinces have had a decline in horse populations since 1940. This is likely due to the rebound of the Canadian automotive industry after the Great Depression and the Second World War. An interesting follow-up visualisation would be car sales per year for each Province over the time period visualised above to further support this hypothesis.
 
 Suppose we were interested in looking in more closely at the province with the highest spread (in terms of standard deviation) of horse populations. We present the standard deviations here:
 
-```{r}
+```{r t1}
 horses_sd_table <- read_csv("../../results/horses_sd.csv")
 largest_sd <- horses_sd_table$Province[1]
 knitr::kable(
@@ -83,16 +83,16 @@ Note that we define standard deviation (of a sample) as
 
 $$s = sqrt( sum_{i = 1}^n(x_i - \bar{x}) / (n-1))$$
 
-Additionally, note that in Table 1 we consider the sample standard deviation of the number of horses during the same time span as Figure1.
+<!-- Additionally, note that in Table \@ref(tab:t1) we consider the sample standard deviation of the number of horses during the same time span as Figure1. -->
 
-```{r, out.width="80%",fig.cap= "Horse populations for the province with the largest standard deviation",fig.align = 'center'}
+```{r h2, out.width="60%",fig.cap= "Horse populations for the province with the largest standard deviation",fig.align = 'center'}
 knitr::include_graphics("../../results/horse_pop_plot_largest_sd.png")
 #Figure 2: Horse populations for the province with the largest standard deviation
 ```
 
 
 
-In Figure 2 we zoom in and look at the province of 'rrow(largest_sd)?', which had the largest spread of values in terms of standard deviation.
+In Figure \@ref(fig:h2) we zoom in and look at the province of 'rrow(largest_sd)?', which had the largest spread of values in terms of standard deviation.
 
 # References
 
