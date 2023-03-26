@@ -14,15 +14,11 @@ output:
   
 bibliography: references.bib
 
-  
-
-  
 ---
 ```{r setup, include= FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
 
 ```
-
 
 ```{r,fig.cap=8}
 
@@ -75,7 +71,7 @@ largest_sd <- horses_sd_table$Province[1]
 knitr::kable(
     #horses_sd_table,
     head(horses_sd_table, 9), booktabs = TRUE,
-  caption = 'Table 1')
+  caption = 'Hourses sample standard deviation')
 
 ```
 
@@ -92,7 +88,7 @@ knitr::include_graphics("../../results/horse_pop_plot_largest_sd.png")
 
 
 
-In Figure \@ref(fig:h2) we zoom in and look at the province of 'rrow(largest_sd)?', which had the largest spread of values in terms of standard deviation.
+In Figure \@ref(fig:h2) we zoom in and look at the province of `r largest_sd`, which had the largest spread of values in terms of standard deviation.
 
 # References
 
